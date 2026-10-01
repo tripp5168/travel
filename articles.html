@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>THE CHRONICLE | 獨立數位雜誌與作品集</title>
+    <title>THE CHRONICLE | 精選作品與專案</title>
     <!-- 引入高雅的Google襯線字體與無襯線字體 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -66,7 +66,7 @@
 
         .magazine-title {
             font-family: var(--font-title);
-            font-size: clamp(3rem, 7vw, 6rem);
+            font-size: clamp(2.5rem, 6vw, 5rem);
             font-weight: 700;
             letter-spacing: 4px;
             text-transform: uppercase;
@@ -81,7 +81,6 @@
             text-transform: uppercase;
         }
 
-        /* 導覽列 */
         .nav-bar {
             display: flex;
             justify-content: center;
@@ -106,113 +105,95 @@
             color: var(--accent-red);
         }
 
-        .editorial-grid {
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 40px;
-            border-bottom: 1px solid var(--border-line);
-            padding-bottom: 40px;
+        .page-header-title {
+            text-align: center;
             margin-bottom: 40px;
         }
 
-        .hero-article {
-            border-right: 1px solid #ddd;
-            padding-right: 40px;
-        }
-
-        .hero-img {
-            width: 100%;
-            height: 400px;
-            object-fit: cover;
-            filter: grayscale(20%);
-            border: 1px solid var(--border-line);
-            margin-bottom: 20px;
-        }
-
-        .tag {
-            font-family: var(--font-sans);
-            font-size: 11px;
-            background-color: var(--text-main);
-            color: #fff;
-            padding: 4px 8px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            display: inline-block;
-            margin-bottom: 12px;
-        }
-
-        h1.article-title {
-            font-size: 2.2rem;
-            line-height: 1.25;
-            margin-bottom: 15px;
-            font-weight: 700;
-        }
-
-        .lead-text {
-            font-size: 1.15rem;
-            color: var(--text-muted);
-            margin-bottom: 20px;
-            text-align: justify;
-        }
-
-        .read-more-btn {
-            font-family: var(--font-sans);
-            display: inline-block;
-            text-decoration: none;
-            color: var(--text-main);
-            font-weight: 600;
-            font-size: 13px;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            border-bottom: 1px solid var(--text-main);
-            padding-bottom: 2px;
-            transition: color 0.2s, border-color 0.2s;
-        }
-
-        .read-more-btn:hover {
-            color: var(--accent-red);
-            border-color: var(--accent-red);
-        }
-
-        /* 側邊欄最新快訊 */
-        .sidebar-section h3 {
+        .page-header-title h2 {
             font-family: var(--font-title);
-            font-size: 1.2rem;
-            border-bottom: 2px solid var(--border-line);
-            padding-bottom: 8px;
-            margin-bottom: 20px;
-            text-transform: uppercase;
+            font-size: 2rem;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
         }
 
-        .sidebar-item {
-            margin-bottom: 25px;
-            padding-bottom: 20px;
-            border-bottom: 1px dotted #ccc;
+        .page-header-title p {
+            font-family: var(--font-sans);
+            color: var(--text-muted);
+            font-size: 0.95rem;
         }
 
-        .sidebar-item:last-child {
-            border-bottom: none;
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+            border-bottom: 1px solid var(--border-line);
+            padding-bottom: 50px;
+            margin-bottom: 40px;
         }
 
-        .sidebar-date {
+        .project-card {
+            border: 1px solid var(--border-line);
+            background-color: #faf9f5;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 6px 6px 0px var(--text-main);
+        }
+
+        .project-img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border: 1px solid var(--border-line);
+            margin-bottom: 15px;
+            filter: grayscale(15%);
+        }
+
+        .project-meta {
             font-family: var(--font-sans);
             font-size: 11px;
             color: var(--accent-red);
             text-transform: uppercase;
             letter-spacing: 1px;
-            display: block;
-            margin-bottom: 5px;
-        }
-
-        .sidebar-item h4 {
-            font-size: 1.1rem;
-            line-height: 1.4;
             margin-bottom: 8px;
         }
 
-        .sidebar-item p {
+        .project-title {
+            font-size: 1.4rem;
+            line-height: 1.3;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+
+        .project-desc {
             font-size: 0.95rem;
             color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+
+        .project-link {
+            font-family: var(--font-sans);
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-main);
+            text-decoration: none;
+            font-weight: 600;
+            border-bottom: 1px solid var(--text-main);
+            align-self: flex-start;
+            padding-bottom: 2px;
+        }
+
+        .project-link:hover {
+            color: var(--accent-red);
+            border-color: var(--accent-red);
         }
 
         footer {
@@ -222,20 +203,9 @@
             color: var(--text-muted);
             letter-spacing: 1px;
             padding-top: 20px;
-            border-top: 1px solid var(--border-line);
         }
 
         @media (max-width: 768px) {
-            .editorial-grid {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-            .hero-article {
-                border-right: none;
-                padding-right: 0;
-                border-bottom: 1px solid #ddd;
-                padding-bottom: 30px;
-            }
             .magazine-meta-top {
                 flex-direction: column;
                 gap: 5px;
@@ -252,9 +222,9 @@
 
     <div class="magazine-wrapper">
         <div class="magazine-meta-top">
-            <span>Vol. 01 / Issue No. 04</span>
-            <span>Est. 2026 — Taipei & Global Edition</span>
-            <span>Personal Editorial Review</span>
+            <span>Portfolio Archive</span>
+            <span>Selected Works 2024–2026</span>
+            <span>Section: Gallery</span>
         </div>
 
         <header>
@@ -262,43 +232,52 @@
             <div class="magazine-subtitle">Digital Portfolio & Essays</div>
             
             <nav class="nav-bar">
-                <a href="index.html" class="active">賞楓秘境</a>
-                <a href="articles.html">精選作品</a>
+                <a href="index.html">賞楓秘境</a>
+                <a href="articles.html" class="active">精選作品</a>
                 <a href="about.html">關於作者</a>
             </nav>
         </header>
 
-        <main class="editorial-grid">
-            <article class="hero-article">
-                <span class="tag">Cover Story</span>
-                <img src="./images/new春日.jpeg" alt="Cover Image" class="hero-img">
-                <h1 class="article-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa labore pariatur neque cum sunt, nesciunt, nam quam fugit aperiam dolorem recusandae expedita eligendi deserunt rem quis repudiandae at officiis animi?
-                </h1>
-              
-                <a href="articles.html" class="read-more-btn">瀏覽作品集 →</a>
-            </article>
+        <main>
+            <div class="page-header-title">
+                <h2>SELECTED PORTFOLIO</h2>
+                <p>AI短影音作品列表</p>
+            </div>
 
-            <aside class="sidebar-section">
-                <h3>Editor's Notes</h3>
-                
-                <div class="sidebar-item">
-                    <span class="sidebar-date">October 2026</span>
-                    <h4>新手入門心法：從零開始刻出第一行 HTML</h4>
-                    <p>掌握語意化標籤（Semantic Tags）是建立清晰排版的基石。</p>
+            <div class="projects-grid">
+                <!-- 專案 1 -->
+                <div class="project-card">
+                    <div>
+                        <span class="project-meta">Web Design / 2026</span>
+                        <img src="./images/CFG.jpg" alt="Project 1" class="project-img">
+                        <h3 class="project-title">CFG洗髮精MV</h3>
+                        <p class="project-desc">用AI減少製作成本及節省時間。</p>
+                    </div>
+                    <a href="https://www.youtube.com/watch?v=Zcg06shoJJ4" class="project-link">檢視詳情 →</a>
                 </div>
 
-                <div class="sidebar-item">
-                    <span class="sidebar-date">Project Milestone</span>
-                    <h4>版面配置革命：CSS Grid 與 Flexbox 的完美交織</h4>
-                    <p>拋棄舊有的浮動排版，現代網頁能像雜誌一樣自由切割區塊。</p>
+                <!-- 專案 2 -->
+                <div class="project-card">
+                    <div>
+                        <span class="project-meta">Typography / 2026</span>
+                        <img src="./images/CFG 男.jpg" alt="Project 2" class="project-img">
+                        <h3 class="project-title">CFG洗髮精俊熊篇</h3>
+                        <p class="project-desc">用AI來化不可能為可能。</p>
+                    </div>
+                    <a href="https://www.youtube.com/watch?v=7FWq917huuI" class="project-link">檢視詳情 →</a>
                 </div>
 
-                <div class="sidebar-item">
-                    <span class="sidebar-date">Future Vision</span>
-                    <h4>跨裝置的閱讀平衡性</h4>
-                    <p>無論在手機直立畫面還是桌機大螢幕，維持字級與行高的黃金比例。</p>
+                <!-- 專案 3 -->
+                <div class="project-card">
+                    <div>
+                        <span class="project-meta">Minimalism / 2026</span>
+                        <img src="./images/樓外雲煙.jpg" alt="Project 3" class="project-img">
+                        <h3 class="project-title">樓外雲煙</h3>
+                        <p class="project-desc">用AI穿今越古。</p>
+                    </div>
+                    <a href="https://www.youtube.com/watch?v=wuKrchda_xE" class="project-link">檢視詳情 →</a>
                 </div>
-            </aside>
+            </div>
         </main>
 
         <footer>
